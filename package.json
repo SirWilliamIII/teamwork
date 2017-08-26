@@ -1,0 +1,27 @@
+{
+  "name": "teamwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirWilliamIII/teamwork.git"
+  },
+  "author": "Will Carpenter <willcarpenteriii@gmail.com> (https://willcarpenter.site)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirWilliamIII/teamwork/issues"
+  },
+  "homepage": "https://github.com/SirWilliamIII/teamwork#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.3",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0"
+  }
+}
