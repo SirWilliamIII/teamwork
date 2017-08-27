@@ -6,13 +6,10 @@ const express    = require('express'),
 
 
 const mongoose = require('./db/mongoose')
-
-const router = express.Router()
-
 const app = express()
 const port = process.env.PORT || 3000
 
-const routes = require('./router/routes');
+const uploads = require('./router/upload-route');
 
 app.use('file/uploads', express.static(__dirname + '/uploads'))
 
@@ -21,10 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 mongoose.connect('mongodb://localhost/upload-node')
-app.use('/', routes)
-
-
-
+app.use('/', uploads)
 
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`)

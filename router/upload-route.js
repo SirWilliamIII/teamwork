@@ -4,18 +4,13 @@ const express = require('express'),
 const router = express.Router()
 
 const Upload = require('../models/upload')
-const User = require('../models/user')
 
 router.getUploads = function (callback, limit) {
 	Upload.find(callback).limit(limit);
 }
-
 router.getUploadById = function (id, callback) {
-
 	Upload.findById(id, callback);
-
 }
-
 router.addUpload = function (image, callback) {
 	Upload.create(image, callback);
 }
